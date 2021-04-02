@@ -1,0 +1,29 @@
+--Modify collumn Grade
+select a.*, b.Grade
+into Output --Create new table Output
+from Students as a
+LEFT JOIN Notes as b
+on a.value BETWEEN b.min_value AND b.max_value
+
+--Rename the students to NULL if their grade is less than 8
+UPDATE Output
+SET name = Null
+where Grade < 8
+
+--Add collumn Aux to table Students
+ALTER TABLE Output
+ADD Aux INT;
+Update Output
+SET Aux = 0; 
+
+UPDATE Output 
+SET Aux = 1 --It means that there are more than one students with the same grade, which is higher than 7
+where EXISTS
+      (select 1 from Output t2 
+       where Output.grade = t2.grade and Output.ID <> t2.ID and Output.grade>7);
+
+UPDATE Output 
+SET Aux = 2 --It means that there are more than one students with the same grade, which is lower than 8
+where EXISTS
+      (select 1 from Output t2 
+       where Output.grade = t2.grade and Output.ID <> t2.ID and Output.grade<8);

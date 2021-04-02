@@ -1,0 +1,5 @@
+--Selecting final output and ordering it as required manner
+SELECT name, GRADE, VALUE from Output
+ORDER BY CASE WHEN AUX>=0 THEN grade END DESC,
+		 CASE WHEN aux=1 THEN name END ASC,
+    	 CASE WHEN aux=2 THEN value END ASC

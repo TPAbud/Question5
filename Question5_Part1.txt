@@ -1,0 +1,21 @@
+--Create table Notes
+CREATE TABLE [Notes] ([Grade] INT,[Min_Value] INT,[Max_Value] INT);
+INSERT INTO [Notes] ([Grade],[Min_Value],[Max_Value]) VALUES ('1','0','9');
+INSERT INTO [Notes] ([Grade],[Min_Value],[Max_Value]) VALUES ('2','10','19');
+INSERT INTO [Notes] ([Grade],[Min_Value],[Max_Value]) VALUES ('3','20','29');
+INSERT INTO [Notes] ([Grade],[Min_Value],[Max_Value]) VALUES ('4','30','39');
+INSERT INTO [Notes] ([Grade],[Min_Value],[Max_Value]) VALUES ('5','40','49');
+INSERT INTO [Notes] ([Grade],[Min_Value],[Max_Value]) VALUES ('6','50','59');
+INSERT INTO [Notes] ([Grade],[Min_Value],[Max_Value]) VALUES ('7','60','69');
+INSERT INTO [Notes] ([Grade],[Min_Value],[Max_Value]) VALUES ('8','70','79');
+INSERT INTO [Notes] ([Grade],[Min_Value],[Max_Value]) VALUES ('9','80','89');
+INSERT INTO [Notes] ([Grade],[Min_Value],[Max_Value]) VALUES ('10','90','100');
+
+--Create table Students
+CREATE TABLE [Students] ([ID] INT,[Name] VARCHAR(10),[Value] INT);
+INSERT INTO [Students] ([ID],[Name],[Value]) VALUES ('1','Julia','81');
+INSERT INTO [Students] ([ID],[Name],[Value]) VALUES ('2','Carol','68');
+INSERT INTO [Students] ([ID],[Name],[Value]) VALUES ('3','Maria','99');
+INSERT INTO [Students] ([ID],[Name],[Value]) VALUES ('4','Andreia','78');
+INSERT INTO [Students] ([ID],[Name],[Value]) VALUES ('5','Jaqueline','63');
+INSERT INTO [Students] ([ID],[Name],[Value]) VALUES ('6','Marcela','88');
